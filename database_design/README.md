@@ -1,4 +1,4 @@
-![Entity_Relationship_Diagram](.images/ERD.jpg)
+![Entity_Relationship_Diagram](./images/ERD.jpg)
 
 This project is all about design of database schema. Four Entrities where created inside a database name intern_managemnt_system.
 The four entities are:- intern, project, assignment and mentor.
