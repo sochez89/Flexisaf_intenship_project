@@ -1,0 +1,2 @@
+
+In this project, important hibernate annotations were used to design Employee entity class which has eleven fields. The service layer and repository layer for persisting data to the database for the entity were also created. The controller which will house the endpoints was also created. These layers are properly positioned in their respective packages. That is, EmployeeService is inside the service package, EmployeeRepository is inside the repository package, EmployeeController is inside the controller package and Employee entity is inside the model package.
