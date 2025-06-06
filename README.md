@@ -1,2 +1,2 @@
-# Environment setup
-This is spring boot application set up using maven build tool
+
+This repository contains tasks done each week while doing internship with Flexisaf.
