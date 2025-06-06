@@ -1,5 +1,6 @@
 package com.Framework_architecture.framework_architecture.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -15,7 +16,11 @@ public class Project {
 
     private String name;
     private String description;
+
+    @JsonFormat(pattern = "yyyy-M-d")
     private LocalDate startDate;
+
+    @JsonFormat(pattern = "yyyy-M-d")
     private LocalDate endDate;
 
     @Enumerated(EnumType.STRING)
@@ -26,5 +31,74 @@ public class Project {
 
     public enum ProjectStatus {
         PLANNING, ONGOING, COMPLETED, ON_HOLD
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public ProjectStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProjectStatus status) {
+        this.status = status;
+    }
+
+    public Set<Assignment> getAssignment() {
+        return assignment;
+    }
+
+    public void setAssignment(Set<Assignment> assignment) {
+        this.assignment = assignment;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", status=" + status +
+                ", assignment=" + assignment +
+                '}';
     }
 }

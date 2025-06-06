@@ -35,6 +35,7 @@ public class ProjectController {
         return ResponseEntity.ok(project);
     }
 
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Project>> getById(@PathVariable Integer id){
         Optional<Project> project = projectService.findById(id);

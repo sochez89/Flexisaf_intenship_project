@@ -27,6 +27,14 @@ public class Intern {
     public Intern() {
     }
 
+    public Intern(Long id, String name, String email, LocalDate joinDate, Mentor mentor) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.joinDate = joinDate;
+        this.mentor = mentor;
+    }
+
     public Long getId() {
         return id;
     }
