@@ -1,0 +1,11 @@
+CREATE TABLE employee (id SERIAL PRIMARY KEY,
+ firstName VARCHAR(25),
+ lastName VARCHAR(25),
+ email VARCHAR(25) UNIQUE NOT NULL,
+ sex VARCHAR(6),
+ phoneNumber VARCHAR(25) UNIQUE,
+ NOKFirstName VARCHAR(30),
+ NOKLastName VARCHAR(30),
+ NOKEmail VARCHAR(30),
+ NOKPhoneNumber VARCHAR(25)
+)
