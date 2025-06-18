@@ -1,10 +1,10 @@
-package com.sochez.DatabaseMigrationWithFlyway;
+package com.sochez.flywayForDatabaseMigration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DatabaseMigrationWithFlywayApplicationTests {
+class FlywayForDatabaseMigrationApplicationTests {
 
 	@Test
 	void contextLoads() {

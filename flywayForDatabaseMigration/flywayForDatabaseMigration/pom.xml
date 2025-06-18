@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sochez</groupId>
-	<artifactId>DatabaseMigrationWithFlyway</artifactId>
+	<artifactId>flywayForDatabaseMigration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DatabaseMigrationWithFlyway</name>
-	<description>Implementing Database migration with flyway Spring Boot application</description>
+	<name>flywayForDatabaseMigration</name>
+	<description>Demonstrating how to use flyway for database migration in Spring Boot application</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -47,11 +47,6 @@
 			<artifactId>flyway-database-postgresql</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
