@@ -1,0 +1,3 @@
+UPDATE employee
+SET userName = SUBSTRING(MD5(RANDOM() ::TEXT) FROM 1 FOR 10)
+WHERE userName IS NULL
