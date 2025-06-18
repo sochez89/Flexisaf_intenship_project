@@ -17,4 +17,5 @@ public class Employee {
     private String NOKLastName;
     private String NOKEmail;
     private String NOKPhoneNumber;
+    private String userName;
 }
