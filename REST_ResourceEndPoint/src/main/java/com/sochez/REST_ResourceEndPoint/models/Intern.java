@@ -1,6 +1,10 @@
 package com.sochez.REST_ResourceEndPoint.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name ="intern")
@@ -8,9 +12,17 @@ public class Intern {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotBlank(message = "first name is required")
     private String firstName;
     private String lastName;
+
+    @Column(name ="email", unique = true, nullable = false)
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email should be valid")
     private String email;
+
+    @Column(name ="phone_number")
+    @Pattern(regexp = "^\\\\+?[1-9]\\\\d{1,14}$\", message = \"Phone number should be valid")
     private String phoneNumber;
 
     public Intern() {
