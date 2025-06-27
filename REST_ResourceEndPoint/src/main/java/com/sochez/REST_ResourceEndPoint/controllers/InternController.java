@@ -47,4 +47,15 @@ public class InternController {
         internService.deleteInternById(id);
         return ResponseEntity.ok("The intern with id: " + id + " was successfully deleted");
     }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Intern> updateIntern(@PathVariable Integer id, @RequestBody Intern intern){
+        try{
+            Intern updatedIntern = internService.updateIntern(id, intern);
+            System.out.println("The updated details are as follows: "+ updatedIntern);
+            return ResponseEntity.ok(updatedIntern);
+        } catch (RuntimeException e){
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

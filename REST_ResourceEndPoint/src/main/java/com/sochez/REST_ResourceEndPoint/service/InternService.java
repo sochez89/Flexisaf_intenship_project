@@ -28,4 +28,28 @@ public class InternService {
     public void deleteInternById(Integer id) {
         internRepository.deleteById(id);
     }
+
+    public Intern updateIntern(Integer id, Intern internDetails) {
+        Optional<Intern> optionalIntern = internRepository.findById(id);
+
+        if (optionalIntern.isPresent()){
+            Intern existingIntern = optionalIntern.get();
+
+            if (internDetails.getFirstName() != null){
+                existingIntern.setFirstName(internDetails.getFirstName());
+            }
+            if (internDetails.getLastName() != null){
+                existingIntern.setLastName(internDetails.getFirstName());
+            }
+            if(internDetails.getEmail() != null){
+                existingIntern.setEmail(internDetails.getEmail());
+            }
+            if (internDetails.getPhoneNumber() != null){
+                existingIntern.setPhoneNumber(internDetails.getPhoneNumber());
+            }
+            return internRepository.save(existingIntern);
+        }else{
+            throw new RuntimeException("Intern with id: " + id + " not found.");
+        }
+    }
 }
