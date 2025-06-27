@@ -19,9 +19,9 @@ public class InternController {
     @PostMapping("/add")
     public ResponseEntity<Intern> addIntern(@RequestBody Intern intern){
         System.out.println("Data received " + intern);
-        Intern savedInter = internService.saveIntern(intern);
-        System.out.println("This intern data was successfully saved: "+  savedInter.getFirstName());
-        return ResponseEntity.ok(savedInter);
+        Intern savedIntern = internService.saveIntern(intern);
+        System.out.println("This intern data was successfully saved: "+  savedIntern);
+        return ResponseEntity.ok(savedIntern);
     }
 
     @GetMapping("/all")
