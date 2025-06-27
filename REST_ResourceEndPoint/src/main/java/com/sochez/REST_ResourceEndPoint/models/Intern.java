@@ -22,7 +22,7 @@ public class Intern {
     private String email;
 
     @Column(name ="phone_number")
-    @Pattern(regexp = "^\\\\+?[1-9]\\\\d{1,14}$\", message = \"Phone number should be valid")
+//    @Pattern(regexp = "^\\\\+?[1-9]\\\\d{1,13}$\", message = \"Phone number should be valid")
     private String phoneNumber;
 
     public Intern() {
