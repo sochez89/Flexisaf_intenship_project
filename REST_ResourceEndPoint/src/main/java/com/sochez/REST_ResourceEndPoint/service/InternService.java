@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class InternService {
@@ -18,5 +19,9 @@ public class InternService {
 
     public List<Intern> getAll() {
         return internRepository.findAll();
+    }
+
+    public Optional<Intern> getInternById(Integer id) {
+        return internRepository.findById(id);
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/interns")
@@ -28,5 +29,16 @@ public class InternController {
         List<Intern> registeredIntern = internService.getAll();
         System.out.println("List of registered interns are: "+ registeredIntern);
         return ResponseEntity.ok(registeredIntern);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Intern>> getInternById(@PathVariable Integer id){
+        Optional<Intern> retrievedInter = internService.getInternById(id);
+        System.out.println("Successfully retrieved intern with id: "+id);
+        if (retrievedInter.isPresent()){
+            return ResponseEntity.ok(retrievedInter);
+        }else{
+            return ResponseEntity.notFound().build();
+        }
     }
 }
