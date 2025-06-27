@@ -41,4 +41,10 @@ public class InternController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteInternById(@PathVariable Integer id){
+        internService.deleteInternById(id);
+        return ResponseEntity.ok("The intern with id: " + id + " was successfully deleted");
+    }
 }

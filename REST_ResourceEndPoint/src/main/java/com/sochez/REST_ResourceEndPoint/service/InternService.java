@@ -24,4 +24,8 @@ public class InternService {
     public Optional<Intern> getInternById(Integer id) {
         return internRepository.findById(id);
     }
+
+    public void deleteInternById(Integer id) {
+        internRepository.deleteById(id);
+    }
 }
