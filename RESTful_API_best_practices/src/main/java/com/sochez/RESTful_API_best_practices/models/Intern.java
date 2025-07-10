@@ -1,11 +1,10 @@
 package com.sochez.RESTful_API_best_practices.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+
+@Entity
 
 public class Intern {
     @Id
